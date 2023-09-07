@@ -17,6 +17,8 @@ app.use(logger(formatsLogger))
 // викликаємо cors
 app.use(cors())
 app.use(express.json())
+// виддає фображення на фронтенд-прописуємо шлях до файлу(папка public)
+app.use(express.static("public"));
 
 app.use('/users', usersRouter)
 app.use('/api/contacts', contactsRouter)
